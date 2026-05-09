@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root{
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(66, 65, 65);
+}
+
+.notes{
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.note{
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 20rem;
+  color: rgb(0, 0, 0);
+}
+
+.note-create-form{
+  display: flex;
+  gap: 1rem;
+  padding-block: 2rem;
+  padding-inline: 4rem;
+}
+
+button{
+  padding: 0.5rem 1rem;
+  background-color: rgb(233, 18, 18);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  
+}
