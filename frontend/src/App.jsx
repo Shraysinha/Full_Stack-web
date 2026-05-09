@@ -7,7 +7,7 @@ function App() {
   const [notes, setNotes] = useState([])
 
   function fetchNotes(){
-     axios.get('http://localhost:3000/notes').then((res)=>{
+     axios.get('https://backend-1-45vr.onrender.com/notes').then((res)=>{
      setNotes(res.data.note)
   })
   }
@@ -25,7 +25,7 @@ function App() {
 
     console.log(title.value , description.value)
 
-    axios.post('http://localhost:3000/notes',{
+    axios.post('https://backend-1-45vr.onrender.com/notes',{
       title : title.value,
       description : description.value
     })
@@ -37,7 +37,7 @@ function App() {
   
   function handleDeleteNote(noteId){
     console.log(noteId)
-    axios.delete("http://localhost:3000/notes/"+noteId)
+    axios.delete("https://backend-1-45vr.onrender.com/notes/"+noteId)
     .then(res=>{
       console.log(res.data)
       fetchNotes()
@@ -49,7 +49,7 @@ function App() {
     const newTitle = prompt("Enter new title")
     const newDescription = prompt("Enter new description")
 
-    axios.patch("http://localhost:3000/notes/" + noteId, {
+    axios.patch("https://backend-1-45vr.onrender.com/notes/" + noteId, {
     title: newTitle,
     description: newDescription
     })
